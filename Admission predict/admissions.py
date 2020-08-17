@@ -4,15 +4,15 @@ from tkinter import *
 
 # with open('model.pkl','rb') as file:
 #     model=pickle.load(file)
-# vals=np.array([311,102,3,4,1]).reshape(1,-1)
+# vals=np.array([311,112,3,9,0]).reshape(1,-1)
 # estimate=model.predict(vals)
-# print(round(estimate[0][0],2))
+# print(estimate)
 
 def predict():
      vals1=int(entry1.get())
      vals2=int(entry2.get())
-     vals3=float(entry3.get())
-     vals4=int(entry4.get())
+     vals3=int(entry3.get())
+     vals4=float(entry4.get())
      vals5=int(entry5.get())
      with open('model.pkl','rb') as file:
          model=pickle.load(file)
@@ -30,10 +30,10 @@ entry1.grid(row=2,column=1)
 toefl=Label(text='TOEFL Score').grid(row=3,column=0)
 entry2=Entry(root,width=8)
 entry2.grid(row=3,column=1)
-cgpa=Label(text='CGPA').grid(row=4,column=0)
+rate=Label(text='University Rating').grid(row=4,column=0)
 entry3=Entry(root,width=8)
 entry3.grid(row=4,column=1)
-rate=Label(text='University Rating').grid(row=5,column=0)
+cgpa=Label(text='CGPA').grid(row=5,column=0)
 entry4=Entry(root,width=8)
 entry4.grid(row=5,column=1)
 research=Label(text='Research done').grid(row=6,column=0)
