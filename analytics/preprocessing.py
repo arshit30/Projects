@@ -15,3 +15,14 @@ def categorical(data,cols=None,dtype='categorical'):
         encoder=LabelEncoder()
         data[cols]=encoder.fit_transform(data[cols])
         return data
+        
+def scaling(data,stype):
+    if stype='musigma':
+        scaler=StandardScaler()
+        data=scaler.fit_transform(data)
+    
+    elif stype='minmax':
+        scaler=MinMaxScaler()
+        data=scaler.fit_transform(data)
+        
+    return data

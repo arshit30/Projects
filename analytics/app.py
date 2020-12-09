@@ -1,6 +1,7 @@
 from flask import Flask,request,render_template
-app=Flask(__name__)
+from files import read_data
 
+app=Flask(__name__)
 
 @app.route('/')
 def index(methods=['GET','POST']):
@@ -10,6 +11,7 @@ def index(methods=['GET','POST']):
 def upload_file():
    if request.method == 'POST':
       files = request.files['file']
-      return 'file uploaded successfully'
+      dataset=read_data(files)
+      return render_template('uploader.html',items=dataset)
 
 app.run(debug=True)

@@ -15,12 +15,14 @@ def plot_scatter(data,col1,col2):
     
 def plot_hist(data,col):
     plt.hist(data[col])
+    plt.legend(col)
     plt.ylabel(col)
     plt.show()
     
 def plot_box(data,col):
     plt.boxplot(data[col])
     plt.ylabel(col)
+    plt.legend(col)
     plt.show()
     
 def plot_pie(data,col):
@@ -28,4 +30,5 @@ def plot_pie(data,col):
     values=list(vals.values)
     categories=list(vals.keys().values)
     plt.pie(values,labels=categories,autopct='%1.1f%%')
+    plt.legend(categories)
     plt.show()
