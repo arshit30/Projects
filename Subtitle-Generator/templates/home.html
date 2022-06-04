@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>PROJECT</title>
+</head>
+<style>
+html { 
+  background: url('/static/pp1.jpg') no-repeat center fixed; 
+  background-size: cover;
+  
+}
+
+h1 {
+  font-family: "Courier New", monospace;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  background-color: Black;
+  text-shadow: 2px 2px 5px white;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+}
+
+.upload-btn-wrapper {
+  font-family: verdana;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.button {
+  background-color: rgba(255,0,0,1);
+  border: none;
+  border-radius: 45%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: verdana;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button:hover {
+        background-color: rgba(254,0,0,1);
+      }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 60px;
+  justify-content: space-evenly;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255,0,0,0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  
+}
+
+</style>
+<body>
+
+<h1>Multiple Language Subtitle Generation</h1>
+
+<form action="" method = "POST" enctype="multipart/form-data">
+<div class= "grid-container">
+<div class= "grid-item"><label for="slan">Source Language&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp </label>
+    <select id="slan" name="slan">
+    <option value="English"><p>English</p></option>
+    <option value="Chinese">Chinese</option>
+    <option value="Japanese">Japanese</option>
+    <option value="French">French</option>
+	<option value="German">German</option>
+	<option value="Spanish">Spanish</option>
+	<option value="Korean">Korean</option>
+  </select>
+</div>
+
+<div class= "grid-item">
+<label for="dlan">Destination Language&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+    
+    <select id="dlan" name="dlan">
+    <option value="English">English</option>
+    <option value="Chinese">Chinese</option>
+    <option value="Japanese">Japanese</option>
+    <option value="French">French</option>
+	<option value="German">German</option>
+	<option value="Spanish">Spanish</option>
+	<option value="Korean">Korean</option>
+  </select>
+ 
+</div>
+</div>
+<pre>
+<center>
+
+<div class="upload-btn-wrapper">
+<label class="button" for="mp4" >Upload mp4 File</label>
+<input type="file" name="mp4" id="mp4" accept= ".mp4" style="display:none" />                                          
+<label for="sub" class="button">Upload Subtitle File</label>
+<input type="file" name="sub" id="sub" accept= ".srt" style="display:none">
+<button type="submit" class="button">Generate Subtitle File</button>
+</div>                    
+</form>
+
+
+</center>
+</pre>
+
+</body>
+</html>
